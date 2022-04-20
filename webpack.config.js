@@ -36,7 +36,9 @@ module.exports = {
           {
             loader: 'css-loader',
             // loader 配置
-            // options: {}
+            options: {
+              importLoaders: 1
+            }
           },
           {
             loader: 'postcss-loader'
