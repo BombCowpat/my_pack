@@ -20,6 +20,9 @@ module.exports = {
             // loader 配置
             // options: {}
           },
+          {
+            loader: 'postcss-loader'
+          }
         ],
       },
       {
@@ -34,6 +37,9 @@ module.exports = {
             loader: 'css-loader',
             // loader 配置
             // options: {}
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'less-loader',
