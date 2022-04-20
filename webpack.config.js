@@ -13,6 +13,9 @@ module.exports = {
         // 规则使用的所有loader数组
         use: [
           {
+            loader: 'style-loader'
+          },
+          {
             loader: 'css-loader',
             // loader 配置
             // options: {}
