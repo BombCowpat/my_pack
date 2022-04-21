@@ -18,11 +18,14 @@ module.exports = {
           {
             loader: 'css-loader',
             // loader 配置
-            // options: {}
+            options: {
+              importLoaders: 1,
+              esModule: false,
+            },
           },
           {
-            loader: 'postcss-loader'
-          }
+            loader: 'postcss-loader',
+          },
         ],
       },
       {
@@ -37,14 +40,26 @@ module.exports = {
             loader: 'css-loader',
             // loader 配置
             options: {
-              importLoaders: 1
-            }
+              importLoaders: 1,
+              esModule: false,
+            },
           },
           {
-            loader: 'postcss-loader'
+            loader: 'postcss-loader',
           },
           {
             loader: 'less-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|gif|svg|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+            },
           },
         ],
       },
