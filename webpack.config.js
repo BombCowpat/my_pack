@@ -56,11 +56,12 @@ module.exports = {
         test: /\.(png|gif|svg|jpe?g)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: 'url-loader',
             options: {
               esModule: false,
               name: 'img/[name].[hash:8].[ext]',
               //outputPath: 'img',
+              limit: 30 * 1024,
             },
           },
         ],
