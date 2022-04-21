@@ -8,3 +8,9 @@ console.log(square(10))
 console.log(getInfo())
 packImg()
 packFont()
+
+const a = "ES6 语法"
+const b = () => {
+  console.log('ES6 箭头函数')
+}
+
