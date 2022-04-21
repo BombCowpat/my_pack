@@ -4,6 +4,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, './dist'),
+    // assetModuleFilename: 'img/[name].[hash:8][ext]',
   },
   module: {
     rules: [
@@ -54,18 +55,28 @@ module.exports = {
       },
       {
         test: /\.(png|gif|svg|jpe?g)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              esModule: false,
-              name: 'img/[name].[hash:8].[ext]',
-              //outputPath: 'img',
-              limit: 30 * 1024,
-            },
+        // type: 'asset/inline',
+        /* type: 'asset/resource',
+        generator: {
+          filename: 'img/[name].[hash:6][ext]',
+        }, */
+        type: 'asset',
+        generator: {
+          filename: 'img/[name].[hash:6][ext]',
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 30 * 1024,
           },
-        ],
+        },
       },
+      {
+        test: /\.(ttf|woff2?)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'font/[name].[hash:6][ext]'
+        }
+      }
     ],
   },
 }
