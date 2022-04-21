@@ -6,6 +6,7 @@ specifiers:
   autoprefixer: ^10.4.4
   babel-loader: ^8.2.5
   clean-webpack-plugin: ^4.0.0
+  core-js: ^3.22.2
   css-loader: ^6.7.1
   file-loader: ^6.2.0
   html-webpack-plugin: ^5.5.0
@@ -14,12 +15,15 @@ specifiers:
   postcss: ^8.4.12
   postcss-loader: ^6.2.1
   postcss-preset-env: ^7.4.3
+  regenerator-runtime: ^0.13.9
   style-loader: ^3.3.1
   url-loader: ^4.1.1
   webpack: ^5.72.0
   webpack-cli: ^4.9.2
 
 dependencies:
+  core-js: registry.npmmirror.com/core-js/3.22.2
+  regenerator-runtime: registry.npmmirror.com/regenerator-runtime/0.13.9
   webpack: registry.npmmirror.com/webpack/5.72.0_webpack-cli@4.9.2
   webpack-cli: registry.npmmirror.com/webpack-cli/4.9.2_webpack@5.72.0
 
@@ -2182,6 +2186,13 @@ packages:
       semver: registry.npmmirror.com/semver/7.0.0
     dev: true
 
+  registry.npmmirror.com/core-js/3.22.2:
+    resolution: {integrity: sha512-Z5I2vzDnEIqO2YhELVMFcL1An2CIsFe9Q7byZhs8c/QxummxZlAHw33TUHbIte987LkisOgL0LwQ1P9D6VISnA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/core-js/-/core-js-3.22.2.tgz}
+    name: core-js
+    version: 3.22.2
+    requiresBuild: true
+    dev: false
+
   registry.npmmirror.com/cosmiconfig/7.0.1:
     resolution: {integrity: sha512-a1YWNUV2HwGimB7dU2s1wUMurNKjpx60HxBB6xUM8Re+2s1g1IIfJvFR0/iCF+XHdE0GMTKTuLR32UQff4TEyQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cosmiconfig/-/cosmiconfig-7.0.1.tgz}
     name: cosmiconfig
@@ -3982,7 +3993,6 @@ packages:
     resolution: {integrity: sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz}
     name: regenerator-runtime
     version: 0.13.9
-    dev: true
 
   registry.npmmirror.com/regenerator-transform/0.15.0:
     resolution: {integrity: sha512-LsrGtPmbYg19bcPHwdtmXwbW+TqNvtY4riE3P83foeHRroMbH6/2ddFBfab3t7kbzc7v7p4wbkIecHImqt0QNg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/regenerator-transform/-/regenerator-transform-0.15.0.tgz}

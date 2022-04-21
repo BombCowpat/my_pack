@@ -14,3 +14,10 @@ const b = () => {
   console.log('ES6 箭头函数')
 }
 
+const p = new Promise((resolve) => {
+  setTimeout(() => {
+    console.log("Promise语法")
+    resolve()
+  }, 1000)
+})
+
