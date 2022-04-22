@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { DefinePlugin } = require('webpack')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 module.exports = {
   mode: 'development',
   devtool: false,
@@ -19,8 +20,11 @@ module.exports = {
         test: /\.css$/,
         // 规则使用的所有loader数组
         use: [
+          // {
+          //   loader: 'style-loader',
+          // },
           {
-            loader: 'style-loader',
+            loader: 'vue-style-loader',
           },
           {
             loader: 'css-loader',
@@ -90,6 +94,14 @@ module.exports = {
            loader: 'babel-loader'
          }
        ]
+      },
+      {
+        test: /\.vue$/,
+        use: [
+          {
+            loader: 'vue-loader'
+          }
+        ]
       }
     ],
   },
@@ -111,6 +123,10 @@ module.exports = {
         // 默认为出口目录
         // to: ''
       }]
-    })
-  ]
+    }),
+    new VueLoaderPlugin()
+  ],
+  devServer: {
+    hot: true
+  }
 }
