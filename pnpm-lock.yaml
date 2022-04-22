@@ -9,6 +9,7 @@ specifiers:
   copy-webpack-plugin: ^10.2.4
   core-js: ^3.22.2
   css-loader: ^6.7.1
+  express: ^4.17.3
   file-loader: ^6.2.0
   html-webpack-plugin: ^5.5.0
   less: ^4.1.2
@@ -21,6 +22,7 @@ specifiers:
   url-loader: ^4.1.1
   webpack: ^5.72.0
   webpack-cli: ^4.9.2
+  webpack-dev-middleware: ^5.3.1
   webpack-dev-server: ^4.8.1
 
 dependencies:
@@ -37,6 +39,7 @@ devDependencies:
   clean-webpack-plugin: registry.npmmirror.com/clean-webpack-plugin/4.0.0_webpack@5.72.0
   copy-webpack-plugin: registry.npmmirror.com/copy-webpack-plugin/10.2.4_webpack@5.72.0
   css-loader: registry.npmmirror.com/css-loader/6.7.1_webpack@5.72.0
+  express: registry.npmmirror.com/express/4.17.3
   file-loader: registry.npmmirror.com/file-loader/6.2.0_webpack@5.72.0
   html-webpack-plugin: registry.npmmirror.com/html-webpack-plugin/5.5.0_webpack@5.72.0
   less: registry.npmmirror.com/less/4.1.2
@@ -46,6 +49,7 @@ devDependencies:
   postcss-preset-env: registry.npmmirror.com/postcss-preset-env/7.4.3_postcss@8.4.12
   style-loader: registry.npmmirror.com/style-loader/3.3.1_webpack@5.72.0
   url-loader: registry.npmmirror.com/url-loader/4.1.1_file-loader@6.2.0+webpack@5.72.0
+  webpack-dev-middleware: registry.npmmirror.com/webpack-dev-middleware/5.3.1_webpack@5.72.0
   webpack-dev-server: registry.npmmirror.com/webpack-dev-server/4.8.1_webpack-cli@4.9.2+webpack@5.72.0
 
 packages:
