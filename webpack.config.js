@@ -2,12 +2,13 @@ const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { DefinePlugin } = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   mode: 'development',
   devtool: false,
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: 'js/main.js',
     path: path.resolve(__dirname, './dist'),
     // assetModuleFilename: 'img/[name].[hash:8][ext]',
   },
@@ -100,6 +101,16 @@ module.exports = {
     }),
     new DefinePlugin({
       BASE_URL: '"./"'
+    }),
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: 'public',
+        globOptions: {
+          ignore: ['**/index.html']
+        }
+        // 默认为出口目录
+        // to: ''
+      }]
     })
   ]
 }
